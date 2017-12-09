@@ -1,2 +1,2 @@
 # fun
-just some fun algorithms i wanted to implement
+Just some fun algorithms i wanted to implement using C++ and python.
