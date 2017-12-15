@@ -41,26 +41,26 @@ long long findMaxPairwaiseProductFast(const std::vector<int>& numbers) {
 
 int main() {
 	// STRESS TESTING
-	while (true) {
-		int n = rand() % 10 + 2;		// number between 2 to 11
-		std::vector<int> numbers;
-		for (int i = 0; i < n; i++) {
-			numbers.push_back(rand() % 100000);
-		}
-		for (int i = 0; i < n; i++) {
-			std::cout << numbers[i] << ' ';
-		}
-		std::cout << "\n";
-
-		long long productSlow = findMaxPairwaiseProduct(numbers);
-		long long productFast = findMaxPairwaiseProductFast(numbers);
-		if (productSlow != productFast) {
-			std::cout << "Wrong answer: " << productSlow << ' ' << productFast << "\n";
-			break;
-		} else {
-			std::cout << "Ok\n";
-		}
-	}
+	//while (true) {
+	//	int n = rand() % 10 + 2;		// number between 2 to 11
+	//	std::vector<int> numbers;
+	//	for (int i = 0; i < n; i++) {
+	//		numbers.push_back(rand() % 100000);
+	//	}
+	//	for (int i = 0; i < n; i++) {
+	//		std::cout << numbers[i] << ' ';
+	//	}
+	//	std::cout << "\n";
+//
+	//	long long productSlow = findMaxPairwaiseProduct(numbers);
+	//	long long productFast = findMaxPairwaiseProductFast(numbers);
+	//	if (productSlow != productFast) {
+	//		std::cout << "Wrong answer: " << productSlow << ' ' << productFast << "\n";
+	//		break;
+	//	} else {
+	//		std::cout << "Ok\n";
+	//	}
+	//}
 
 	int n;
 	std::cin >> n;
@@ -68,8 +68,6 @@ int main() {
 	for (int i = 0; i < n; i++) {
 		std::cin >> numbers[i];
 	}
-	std::sort (numbers.begin(), numbers.end());
-	int length = numbers.size();
 	std::cout << findMaxPairwaiseProductFast(numbers) << "\n";
 	return 0;
 }
